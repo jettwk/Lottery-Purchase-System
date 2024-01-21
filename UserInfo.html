@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <main>
+    <div class="home-icon">
+      <a href="homepage.html" onclick="window.location.href='homepage.html';">
+        <i class="fas fa-home"></i>
+      </a>
+    </div>
+    <div class="user-info-container">
+      <h1 class="userInfoTitle"> User Info </h1>
+      <p>Name: <span id="user-name"></span></p>
+      <p>Email: <span id="user-email"></span></p>
+      <p>Phone: <span id="user-phone"></span></p>
+      <p>Address: <span id="user-address"></span></p>
+      <h3>Bank Account Information</h3>
+      <p>Bank Name: <span id="user-bank-name"></span></p>
+      <p>Account Number: <span id="user-account-number"></span></p>
+      <p>Routing Number: <span id="user-routing-number"></span></p>
+
+      <h3>Primary Payment Method</h3>
+      <select id="payment-dropdown">
+        <option value="-1">Select Payment Info</option>
+      </select>
+    </div>
+
+    <div class="user-info-container" id="user-info-edit" style="display: none;">
+      <h1 class="userInfoTitle"> Edit User Info </h1>
+      <p>Name: <input type="text" id="edit-user-name" required /></p>
+      <p>Email: <input type="text" id="edit-user-email" required /></p>
+      <p>Phone: <input type="text" id="edit-user-phone" required /></p>
+      <p>Address: <input type="text" id="edit-user-address" required /></p>
+      <h3>Edit Bank Account Info</h3>
+      <p>Bank Name: <input type="text" id="edit-user-bank-name" /></p>
+      <p>Account Number: <input type="text" id="edit-user-account-number" /></p>
+      <p>Routing Number: <input type="text" id="edit-user-routing-number" /></p>
+      <button class="edit-user-info-button" id="save-user-info-button">Save</button>
+      <button class="edit-user-info-button cancel-button" id="cancel-edit-button">Cancel</button>
+    </div>
+    
+    <button class="edit-user-info-button" id="edit-user-info-button">Edit</button>
+  </main>
+  <div id="addPaymentModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeAddPaymentModal()">&times;</span>
+      <h2 class="subtitle">Add Payment Info</h2>
+      <form id="addPaymentForm">
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" required>
+
+        <label for="expirationDate">Expiration Date:</label>
+        <input type="text" id="expirationDate" placeholder="MM/YY" required>
+
+        <label for="csv">CSV:</label>
+        <input type="text" id="csv" required>
+
+        <label for="cardOwnerName">Card Owner Name:</label>
+        <input type="text" id="cardOwnerName" required>
+
+        <button type="button" onclick="savePaymentInfo()">Save Payment Info</button>
+      </form>
+    </div>
+  </div>
+
+
+</body>
+  
+<script src="script.js"></script>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+  <h1 class="title">Admin Dashboard</h1>
+  <div class="button-wrapper">
+    <button id="add-ticket-button">Add New Ticket</button>
+    <button id="status-report-button">Status Report</button>
+    <button id="add-winning-button">Add Winning Numbers</button>
+  </div>
+
+  <div class="ticket-box" id="addTicket">
+    <span class="close" onclick="newTicketClose()">&times;</span>
+    <h2>Add a New Ticket</h2>
+    <form id="add-ticket">
+      <p class="formdescription"> Please enter the ticket's information below.</p>
+      <input type="text" id="new-ticket-name" placeholder="Ticket Name" class="input" required>
+      <input type="text" id="new-ticket-price" placeholder="Ticket Price" class="input" required>
+      <input type="text" id="new-ticket-date" placeholder="Ticket Draw Date" class="input" required>
+      <input type="text" id="new-ticket-winnings" placeholder="Ticket Winning Amount" class="input" required>
+      <input type="submit" id="add-ticket" value="Add Ticket" class="input" required>
+    </form>
+  </div>
+
+  <div class="results-container">
+    <ul id="results-list-admin"></ul>
+  </div>
+
+  <div class="results-container">
+    <ul id="results-list-admin"></ul>
+  </div>
+
+  <div class="sign-out-prompt">
+    <p>All changes final? <a href="index.html"> Sign out</p>
+  </div>
+</body>
+<script src="script.js"></script>
+
+</html>

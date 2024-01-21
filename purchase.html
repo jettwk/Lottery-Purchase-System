@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Purchase Page</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <div class="home-icon">
+    <a href="homepage.html">
+      <i class="fas fa-home"></i>
+    </a>
+  </div>
+  <h1 class="title">ORDER</h1>
+  <!-- Shopping cart -->
+  <h2 class="subtitle">Shopping Cart</h2>
+  <!-- dynamically generate the list of tickets in the shopping cart-->
+  <div class="results-container">
+    <ul id="results-list-cart"></ul>
+  </div>
+  <div class="subtitle" id="total-price">Total: $0.00</div>
+
+  <!-- Display default payment information -->
+  <div id="defaultPaymentDetails">
+    <h3 class="subtitle">Payment Method</h3> <button id="change-payment-button">Change card?</button>
+    <!-- Paypal button -->
+    <a href="paypalLogin.html">
+      <img src="imgs/R.png" alt="PayPal" class="paypal-button">
+    </a>
+    <p class="small-txt" id="payment-method"><span></span></p>
+  </div>
+
+  <button id="confirm-purchase-button">Confirm Purchase</button>
+  <h2 class="subtitle">Previous Orders</h2>
+  <!-- dynamically generate the list of tickets in the previous orders-->
+  <div class="results-container">
+    <ul id="results-list-history"></ul>
+  </div>
+
+  <div class="ticket-box" id="select-numbers">
+    <span class="close" onclick="numberSelectClose()">&times;</span>
+    <form id="set-numbers">
+      <h2></h2>
+      <input type="text" id="num-1" placeholder="Number 1" class="input" required>
+      <input type="text" id="num-2" placeholder="Number 2" class="input" required>
+      <input type="text" id="num-3" placeholder="Number 3" class="input" required>
+      <input type="text" id="num-4" placeholder="Number 4" class="input" required>
+      <input type="text" id="num-5" placeholder="Number 5" class="input" required>
+      <button id="random-numbers">Random Numbers</button>
+      <input type="submit" id="set-numbers" value="Confirm Numbers" class="input" required>
+  </div>
+  <button id="redeem-button-order">Redeem Winnings?</button>
+</body>
+<script src="script.js"></script>
+
+</html>

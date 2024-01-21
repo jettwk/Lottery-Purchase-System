@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <div class="home-icon">
+    <a href="homepage.html">
+      <i class="fas fa-home"></i>
+    </a>
+  </div>
+
+  <div class="container">
+    <h1 class="title">Browse</h1>
+    <div class="cart-icon-container">
+      <button id="cart-button">
+        <i class="fas fa-shopping-cart"></i>
+      </button>
+    </div>
+
+    <!-- filter buttons -->
+    <div class="filter-container">
+      <div class="button-wrapper">
+        <button id="filter-name">Filter by Name</button>
+        <button id="filter-price">Filter by Price</button>
+        <button id="filter-draw-date">Filter by Draw Date</button>
+        <button id="filter-winnings">Filter by Winnings</button>
+      </div>
+    </div>
+    <!-- sorting options -->
+    <div class="button-wrapper">
+      <button id="ascending-button">Ascending</button>
+      <button id="descending-button">Descending</button>
+    </div>
+
+
+    <!-- search bar -->
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Search for a Ticket by Name">
+    </div>
+
+
+
+    <!-- dynamically generate the list of tickets-->
+    <div class="results-container">
+      <ul id="results-list-browse"></ul>
+    </div>
+
+
+  </div>
+
+
+</body>
+<script src="script.js"></script>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+  <body>
+    <div class="paypal-login-container">
+      <h1 class="title">PayPal Login</h1>
+      <form id="paypal-login-form" onsubmit="event.preventDefault(); savePaypalInfo();">
+        <!-- Collect Paypal info -->
+        <label for="paypal-email">PayPal Email:</label>
+        <input type="email" id="paypal-email" name="paypal-email" required>
+        <br>
+        <label for="paypal-password">PayPal Password:</label>
+        <input type="password" id="paypal-password" name="paypal-password" required>
+        <!-- SUBMIT BUTTON -->
+        <button type="submit">Save Payment Method</button>
+      </form>
+    </div>
+  </body>
+  <script src="script.js"></script>
+
+</html>

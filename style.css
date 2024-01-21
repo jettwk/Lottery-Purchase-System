@@ -1,0 +1,458 @@
+html,
+body {
+  background-color: #002868;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.title {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+  font-size: 3rem;
+  color: #FFFFFF;
+}
+
+.subtitle {
+  color: white;
+}
+
+.formdescription {
+  text-align: center;
+  font-size: small;
+  color: #333333;
+  opacity: 0.75;
+}
+
+.description {
+  text-align: left;
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+}
+
+/* style the form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafafa;
+  border-radius: 5px;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the form inputs */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* style the form button */
+button[type="submit"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #0070f3;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0053ba;
+}
+
+/* style the form links*/
+a {
+  color: #0070f3;
+  text-decoration: none;
+  margin-top: 1rem;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0053ba
+}
+
+
+
+
+/* added by Dylan 11/20*/
+
+
+.results-container {
+  list-style: none;
+  padding: 0;
+}
+
+.results-container li {
+  margin-bottom: 20px;
+  /* Adjust as needed for spacing between tickets */
+}
+
+.ticket-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+}
+
+.ticket-info {
+  flex-grow: 1;
+  /* Allow ticket info to grow and take up remaining space */
+}
+
+.purchase-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-icon-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#cart-button {
+  color: #fff;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/*admin dialogue*/
+.admin-dialogue {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+  text-align: right;
+  justify-content: center;
+  color: darkgray;
+  opacity: 0.75;
+}
+
+.edit-button {
+  background-color: #00bfff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+}
+
+.delete-button {
+  background-color: #8b0000;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+}
+
+.ticket-box {
+  display: none;
+  background-color: green;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.edit-box {
+  display: block;
+  background-color: green;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+
+
+/* User info styling */
+.user-info-container {
+  background: black;
+  border-radius: 30px;
+  color: white;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+}
+
+.userInfoTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.edit-user-info-button {
+  background-color: darkgreen;
+  border-radius: 50px;
+  font-style: bold, italic;
+  color: white;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.home-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 30px;
+  color: white;
+}
+
+.home-icon a {
+  color: inherit
+}
+
+.sign-out-prompt {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f44336;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1em;
+  border-top: 2px solid #d32f2f;
+}
+
+.sign-out-prompt a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sign-out-prompt a:hover {
+  text-decoration: underline;
+}
+
+/* 
+This is a universal button wrapper to be used to 
+uniformly formatting our buttons accross all pages.
+*/
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/* 
+Finalizing the looks of some buttons - Jett Kiker
+*/
+
+
+#add-ticket-button,
+#status-report-button,
+#add-winning-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#filter-name,
+#filter-price,
+#filter-draw-date,
+#filter-winnings {
+  padding: 5px;
+  background-color: grey;
+  color: white;
+  border-radius: 10px;
+  font-style: bold;
+  font-size: 17px;
+}
+
+#redeem-button-order {
+  background: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 2px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+#redeem-button-order:hover {
+  background-color: #218838;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+#page-jump-browse,
+#page-jump-user-info,
+#page-jump-numbers,
+#page-jump-history {
+  background: transparent;
+  color: white;
+  border: none;
+  font-style: bold;
+  font-size: 1.5em;
+}
+
+.cross_line {
+  display: inline-block;
+  position: relative;
+  padding: 0.25em 1em;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+  text-decoration: none;
+  font-weight: bold;
+  color: #03A9F4;
+}
+
+.cross_line:before,
+.cross_line:after {
+  content: '';
+  position: absolute;
+  top: -7px;
+  width: 2px;
+  height: -webkit-calc(100% + 14px);
+  height: calc(100% + 14px);
+  background-color: black;
+  transition: .3s;
+}
+
+.cross_line:before {
+  left: 7px;
+}
+
+.cross_line:after {
+  right: 7px;
+}
+
+.cross_line:hover:before {
+  top: 0px;
+  left: 0;
+  height: 100%;
+}
+
+.cross_line:hover:after {
+  top: 0px;
+  right: 0;
+  height: 100%;
+}
+
+.small-txt {
+  font-size: .8em;
+  color: white;
+}
+
+.homeTitle {
+  font-size: 2em;
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.homeTitle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #066c8e;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.paypal-button {
+  background-color: yellow;
+  border: none;
+  border-radius: 50px; 
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  margin-left: 20px; 
+}
+
+.paypal-button-text {
+  color: #111;
+  font-size: 16px;
+}
+
+.paypal-button:hover {
+  background-color: #f1f1f1;
+  box-shadow: 0px 0px 15px 5px #ffd700; /* Flashy hover effect */
+}
+
